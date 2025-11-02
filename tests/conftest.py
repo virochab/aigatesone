@@ -31,6 +31,12 @@ def authority_weights():
 def rag_client():
     return MockRAGClient()
 
+@pytest.fixture(scope="module")
+def cached_rag_queries():
+    """Cache RAG queries per module to avoid re-querying across tests"""
+    cache = {}
+    return cache
+
 @pytest.fixture(scope="session")
 def scorecard():
     rows = []

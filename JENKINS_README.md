@@ -64,6 +64,8 @@ node {
 ## Environment Variables
 - `PYTHON_VERSION`: Python version to use (default: 3.9)
 - `VENV_PATH`: Path to virtual environment (default: `${WORKSPACE}/.venv`)
+- `PYTHONIOENCODING`: UTF-8 encoding for I/O operations (default: `utf-8`)
+- `PYTHONUTF8`: Enable UTF-8 mode for Python 3.7+ (default: `1`)
 
 ## Test Output
 Reports are generated in the `reports/` directory:
@@ -103,6 +105,13 @@ If the `publishHTML` step fails, either:
 - **Activation**: Uses `call activate.bat` for virtual environment activation
 - **Directory commands**: Uses `cd /d` for directory changes with drive letters
 - **File checking**: Uses `if exist` instead of `[ -d ]` for directory checks
+- **UTF-8 encoding**: Sets `PYTHONIOENCODING=utf-8` and `PYTHONUTF8=1` to handle Unicode characters
+
+### UnicodeEncodeError fixes
+If you encounter `UnicodeEncodeError: 'charmap' codec can't encode characters`:
+1. The pipeline already sets UTF-8 environment variables
+2. Ensure your data files (JSON, CSV) are saved with UTF-8 encoding
+3. For manual testing, run: `set PYTHONIOENCODING=utf-8 && set PYTHONUTF8=1 && pytest`
 
 ## Customization
 
