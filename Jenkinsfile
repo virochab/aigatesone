@@ -5,6 +5,8 @@ pipeline {
         PYTHON_VERSION = '3.9'
         VENV_PATH = "${WORKSPACE}\\.venv"
         ACTIVATE_SCRIPT = "${VENV_PATH}\\Scripts\\Activate.ps1"
+        PYTHONIOENCODING = 'utf-8'
+        PYTHONUTF8 = '1'
     }
     
     stages {
