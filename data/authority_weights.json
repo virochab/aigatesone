@@ -1,0 +1,10 @@
+{
+  "gov": 1.0,
+  "insurer_verified": 0.95,
+  "edu": 0.9,
+  "org": 0.8,
+  "news": 0.7,
+  "com": 0.6,
+  "blog": 0.4,
+  "unknown": 0.3
+}

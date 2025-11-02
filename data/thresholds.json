@@ -1,0 +1,11 @@
+{
+  "SPS": 0.8,
+  "SPG": 0.2,
+  "BLF": 0,
+  "LES": 0.75,
+  "RFI": 0.5,
+  "CitationMin": 2,
+  "DocRecency": 0.6,
+  "Authority": 0.6,
+  "ACTIVE_YEAR": 2025
+}
